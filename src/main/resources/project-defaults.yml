@@ -1,0 +1,16 @@
+swarm:
+  http:
+    port: 8100
+  logging: DEBUG
+  elytron:
+    file-audit-logs:
+      local-audit:
+        path: target/audit.log
+
+activemq:
+  connection:
+    url: "tcp://spl-vl-amq02.dmz.splr.cargonaut.local:61616"
+  channel:
+    inputChannel: "queue:USERS.cofano.ATOKeys2"
+    outputChannel: "queue:USERS.cofano.ATOKeys"
+
